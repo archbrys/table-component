@@ -41,7 +41,7 @@ function Row({ rowData, headerKeys, children, onRowClick }: IRow) {
           ? children[key](rowData) || ''
           : children[key] || ''
         : value,
-    []
+    [rowData]
   )
 
   const handleOnClick = useCallback((rData: ITableData): void => {
